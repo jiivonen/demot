@@ -141,7 +141,27 @@ app.put('/tyontekijat/:id', (req, res) => {
   }
 });
 
+app.delete('/tyontekijat/:id', (req, res) => {
+  const poistettava = req.params.id;
+  let onOlemassa = false;
 
+  for (let i = 0; i < tyontekijat.length; i++) {
+    if (tyontekijat[i].id == poistettava) {
+      tyontekijat.splice(i, 1);
+      onOlemassa = true;
+
+      // korjaus indeksinumeroon poistamisen jälkeen, jotta ei hypätä yhden henkilön yli
+      i--;
+    }
+  }
+
+  if (onOlemassa) {
+    res.json({'viesti': 'Työntekijä poistettu.'});
+  }
+  else {
+    res.status(400).json({'viesti': 'Virhe: Annettua ID-numeroa ei ole olemassa.'});
+  }
+});
 
 // Käynnistetään express-palvelin
 app.listen(port, host, () => {console.log('Kuuntelee')});
