@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "etunimi": "Bill",
+    "sukunimi": "Vautre",
+    "yritys": "Tillman-Hahn",
+    "osasto": "Sales",
+    "kaupunki": "Blachownia"
+  },
+  {
+    "id": 2,
+    "etunimi": "Audie",
+    "sukunimi": "Corragan",
+    "yritys": "Schaefer, Crist and Feest",
+    "osasto": "Product Management",
+    "kaupunki": "Bantul"
+  },
+  {
+    "id": 3,
+    "etunimi": "Osmo-Susanna",
+    "sukunimi": "Tietonen",
+    "yritys": "Firma oy",
+    "osasto": "myynti",
+    "kaupunki": "Helsinki"
+  }
+]
